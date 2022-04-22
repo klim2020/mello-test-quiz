@@ -4,8 +4,11 @@ namespace Database\Seeders;
 
 use App\Models\Actor;
 use App\Models\Movie;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 use VfacTmdb\Factory;
 use VfacTmdb\Item;
 use VfacTmdb\Search;
@@ -108,6 +111,13 @@ class DatabaseSeeder extends Seeder
             $movie_model->save();
 
         }
+
+        User::create([
+            'name' => 'klim',
+            'email' => 'klim@gmail.com',
+            'password' => Hash::make('1111'),
+            'api_token' => Str::random(60),
+        ])->save();//
 
 
     }
