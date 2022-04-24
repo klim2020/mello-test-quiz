@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Repositories\Interfaces\MovieRepositoryInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -33,5 +34,10 @@ class UserController extends Controller
         return response()->json(['token' => $user->createToken($request->name)->plainTextToken]);
 
 
+    }
+
+    //Для тестов
+    public function test(Request $request, MovieRepositoryInterface $movie){
+        return "ddddd";
     }
 }

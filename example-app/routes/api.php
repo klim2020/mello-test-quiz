@@ -15,9 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/test', function (Request $request) {
-return "test completed";
-});
+Route::middleware('auth:sanctum')->get('/test', [UserController::class,'test']);
+
 
 Route::post('/token', [UserController::class, 'token']);
 
