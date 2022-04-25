@@ -20,7 +20,7 @@
 
 копируем -  `git clone https://github.com/klim2020/mello-test-quiz`
 
-запускаем докер контейнеры - 'sh sl up -d`
+запускаем докер контейнеры - `sh sl up -d`
 
 скачиваем зависимости `sh sl composer install`
 
