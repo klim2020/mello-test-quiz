@@ -45,13 +45,47 @@
 					"formdata": []
 				},
 				"url": {
-					"raw": "localhost/api/user",
+					"raw": "localhost/api/test",
 					"host": [
 						"localhost"
 					],
 					"path": [
 						"api",
-						"user"
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "список фильмов",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{BEARERTOKENN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost/api/movies?search['name']=Имя",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"movies"
+					],
+					"query": [
+						{
+							"key": "search['name']",
+							"value": "Имя"
+						}
 					]
 				}
 			},
@@ -83,9 +117,7 @@
 					"    (err, res) => {",
 					"        // Set BEARERTOKEN",
 					"        pm.collectionVariables.set(\"BEARERTOKENN\", res.json().token);",
-					"        console.log(res.json());",
-					"       ",
-					"});",
+					"    });",
 					""
 				]
 			}

@@ -17,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/test', [UserController::class,'test']);
 
+Route::middleware('auth:sanctum')->get('/show', [\App\Http\Controllers\MovieController::class,'show']);
+
 
 Route::post('/token', [UserController::class, 'token']);
+
+
 
