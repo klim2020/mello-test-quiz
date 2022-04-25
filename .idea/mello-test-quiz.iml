@@ -39,7 +39,6 @@
       <excludeFolder url="file://$MODULE_DIR$/example-app/vendor/dflydev/dot-access-data" />
       <excludeFolder url="file://$MODULE_DIR$/example-app/vendor/egulias/email-validator" />
       <excludeFolder url="file://$MODULE_DIR$/example-app/vendor/laravel/tinker" />
-      <excludeFolder url="file://$MODULE_DIR$/example-app/vendor/laravel/sail" />
       <excludeFolder url="file://$MODULE_DIR$/example-app/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/example-app/vendor/laravel/serializable-closure" />
       <excludeFolder url="file://$MODULE_DIR$/example-app/vendor/laravel/sanctum" />
